@@ -6,6 +6,9 @@ Kubernetes Frequently Asked Questions
 
 ### How to compile spark with Kubernetes and create your own docker image 
 
+You need java 8 for compiling. Java 9 is known to run into issues.
+
+
 1. git clone http://github.com/apache/spark
 2. cd spark
 3. ./dev/make-distribution.sh --name mdl-spark --pip --tgz -Phadoop-2.7 -Pkubernetes
