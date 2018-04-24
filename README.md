@@ -27,7 +27,8 @@ You need java 8 for compiling. Java 9 is known to run into issues.
 
 ### How do I enable alpha features of Kubernetes while creating cluster through Azure ACS engine?
 
-Specify following in you spec:
+Specify following in your spec, as described here : https://github.com/Azure/acs-engine/blob/master/docs/clusterdefinition.md#apiserverconfig
+
 ```
 ....
 "kubernetesConfig": {
