@@ -18,3 +18,22 @@ You need java 8 for compiling. Java 9 is known to run into issues.
 7. cd spark-2.4.0-SNAPSHOT-bin-mdl-spark
 8. ./bin/docker-image-tool.sh -t latest -r dharmeshkakadia build
 9. ./bin/docker-image-tool.sh -t latest -r dharmeshkakadia push
+
+
+## Tensorflow on Kubernetes 
+
+
+## ACS Engine
+
+### How do I enable alpha features of Kubernetes while creating cluster through Azure ACS engine?
+
+Specify following in you spec:
+```
+....
+"kubernetesConfig": {
+    "apiServerConfig": {
+        "--enable-admission-plugins": ""
+    }
+}
+....
+```
