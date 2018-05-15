@@ -40,6 +40,13 @@ bin/spark-submit \
 --jars local:///opt/spark/examples/jars/spark-examples_2.11-2.4.0-SNAPSHOT.jar \
 local:///opt/spark/examples/jars/spark-examples_2.11-2.4.0-SNAPSHOT.jar wasb://<YOUR_STORAGE_CONTAINER_NAME>@<YOUR_STORAGE_ACCOUNT>.blob.core.windows.net/<PATH>
 
+
+### How do I get the logs of the last run of scheduled spark pipeline?
+```
+APP_NAME=pyspark-example
+kubectl logs -f $(kubectl get sparkapplications/$(kubectl get scheduledsparkapplications/$APP_NAME -o=jsonpath='{.status.pastRunNames[0]}') -o jsonpath='{.status.driverInfo.podName}')
+```
+
 ## Tensorflow on Kubernetes 
 
 
@@ -59,8 +66,3 @@ Specify following in your spec, as described here : https://github.com/Azure/acs
 ....
 ```
 
-### How do I get the logs of the last run of scheduled spark pipeline?
-```
-APP_NAME=pyspark-example
-kubectl logs -f $(kubectl get sparkapplications/$(kubectl get scheduledsparkapplications/$APP_NAME -o=jsonpath='{.status.pastRunNames[0]}') -o jsonpath='{.status.driverInfo.podName}')
-```
