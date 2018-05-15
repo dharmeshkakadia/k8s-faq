@@ -47,6 +47,11 @@ APP_NAME=pyspark-example
 kubectl logs -f $(kubectl get sparkapplications/$(kubectl get scheduledsparkapplications/$APP_NAME -o=jsonpath='{.status.pastRunNames[0]}') -o jsonpath='{.status.driverInfo.podName}')
 ```
 
+### How do I find currently running pods from a spark job?
+```
+kubectl get pods -l sparkoperator.k8s.io/app-name=pyspark-job-example
+```
+
 ## Tensorflow on Kubernetes 
 
 
