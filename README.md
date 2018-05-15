@@ -1,6 +1,12 @@
 # k8s-faq
 Kubernetes Frequently Asked Questions 
 
+## General 
+
+### How do I merge two kube configs?
+```
+KUBECONFIG=~/.kube/config:~/.kube/additional-kubeconfig kubectl config view --flatten > ~/temp && mv ~/temp ~/.kube/config
+```
 
 ## Spark on Kubernetes 
 
