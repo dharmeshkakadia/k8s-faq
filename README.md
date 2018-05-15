@@ -52,6 +52,11 @@ kubectl logs -f $(kubectl get sparkapplications/$(kubectl get scheduledsparkappl
 kubectl get pods -l sparkoperator.k8s.io/app-name=pyspark-job-example
 ```
 
+### How to delete scheduled spark pipeline?
+```
+kubectl delete scheduledsparkapplications/pyspark-example
+```
+
 ## Tensorflow on Kubernetes 
 
 
