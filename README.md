@@ -19,6 +19,9 @@ brew list kubernetes-cli --versions
 brew switch kubernetes-cli 1.9.3
 ```
 
+### How do I switch between different kubernetes clusters?
+Use [kubectx](https://github.com/ahmetb/kubectx)
+
 ## Spark on Kubernetes 
 
 ### How to compile spark with Kubernetes and create your own docker image with Azure Storage Support(WASB/ADLS)
