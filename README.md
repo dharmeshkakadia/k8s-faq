@@ -8,6 +8,17 @@ Kubernetes Frequently Asked Questions
 KUBECONFIG=~/.kube/config:~/.kube/additional-kubeconfig kubectl config view --flatten > ~/temp && mv ~/temp ~/.kube/config
 ```
 
+### How can I install a specfic version of ``kubectl``?
+List available versions
+```
+brew list kubernetes-cli --versions
+```
+
+``switch`` to desired version from the above list:
+```
+brew switch kubernetes-cli 1.9.3
+```
+
 ## Spark on Kubernetes 
 
 ### How to compile spark with Kubernetes and create your own docker image with Azure Storage Support(WASB/ADLS)
